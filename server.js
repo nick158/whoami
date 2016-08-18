@@ -1,6 +1,7 @@
 var express = require('express');
 
 var app = express();
+app.set("port", (process.ENV.PORT || 5000));
 
 app.get('/', function(req, res){
     //final response object
@@ -15,10 +16,12 @@ app.get('/', function(req, res){
     var ind = userAg.indexOf('(');
     var ind2 = userAg.indexOf(')');
     obj.platform = userAg.substring(ind+1, ind2);
-    //send by json
+    //send by jsonnode
     res.json(obj);
     
     res.end();
     return;
 });
-app.listen(8080);
+app.listen(app.get('port'), function(){
+    console.log("App now listening on port", app.get('port'));
+});
