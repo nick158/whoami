@@ -1,0 +1,15 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "timestamp api for free code camp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas",
+  "license": "MIT",
+  "dependencies": {
+    "dateformat": "^1.0.12",
+    "express": "^4.14.0"
+  }
+}
